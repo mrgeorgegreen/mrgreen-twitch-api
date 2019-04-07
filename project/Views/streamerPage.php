@@ -20,7 +20,8 @@
     </div>
 
     <div class="row">
-        <textarea id="text" rows="20" style="font-family:Courier;width:100%"></textarea>
+            <label for="comment">Events:</label>
+            <textarea id="text"  class="form-control" rows="12"></textarea>
     </div>
 </div>
 
@@ -49,12 +50,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script type="text/javascript">
+    var clientId = "<?= $data['clientId'] ?? '' ?>";
+
     $(function () {
         if (document.location.hash.match(/access_token=(\w+)/))
             parseFragment(document.location.hash);
         if (sessionStorage.twitchOAuthToken) {
-            // connect();
-            // $('.socket').show()
             $.ajax({
                 url: "https://api.twitch.tv/v5/channels/<?= $data['streamer_id'] ?? '' ?>/events",
                 method: "GET",
@@ -63,9 +64,9 @@
                     "Authorization": "Bearer " + sessionStorage.twitchOAuthToken
                 }
             })
-                .done(function (user) {
-                    $.each(streamers.data, function (key, streamer) {
-                        $('#text').append(event.data);
+                .done(function (events) {
+                    $.each(events.data, function (key, event) {
+                        $('#text').append(event.data.description);
                     });
                 });
         }
