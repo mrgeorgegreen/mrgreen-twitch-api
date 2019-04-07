@@ -1,7 +1,8 @@
 <?php
 return([
     'twitch' => [
-        'client_id' => 'miztc6t5uwudryg94pqz5hm0s3vcw8',
+//        'client_id' => 'miztc6t5uwudryg94pqz5hm0s3vcw8',
+        'client_id' => '8h5hefxsn94rxcvj37pib6aepnucla',
         'redirect_uri' => 'http://localhost?twitch=true',
         'response_type' => 'token',
         'scope' => 'channel:read:subscriptions chat:read',
