@@ -1,0 +1,45 @@
+DirectoryIndex index.php
+RewriteEngine On
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^ index.php [L]
+
+RewriteRule !^(public/|index\.php) [NC,F]
+
+
+#<IfModule mod_rewrite.c>
+#<Directory /var/www/html>
+#    <IfModule mod_negotiation.c>
+#        Options -MultiViews
+#    </IfModule>
+#
+#    RewriteEngine On
+#
+#    # Redirect Trailing Slashes If Not A Folder...
+#    RewriteCond %{REQUEST_FILENAME} !-d
+#    RewriteRule ^(.*)/$ /$1 [L,R=301]
+#
+#    # Handle Front Controller...
+#    RewriteCond %{REQUEST_FILENAME} !-d
+#    RewriteCond %{REQUEST_FILENAME} !-f
+#    RewriteRule ^ index.php [L]
+#
+#    # Handle Authorization Header
+#    RewriteCond %{HTTP:Authorization} .
+#    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+#</Directory>
+#</IfModule>
+
+
+#Options -MultiViews
+#RewriteEngine On
+#Options -Indexes
+#
+##RewriteBase /
+#
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-l
+#
+#RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]

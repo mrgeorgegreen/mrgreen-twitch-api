@@ -1,0 +1,53 @@
+# Scarth for REST in PhpStorm
+
+GET https://id.twitch.tv/oauth2/authorize?response_type=code&client_id=miztc6t5uwudryg94pqz5hm0s3vcw8&redirect_uri=http://localhost&scope=channel:read:subscriptions&state=c3ab
+
+###
+
+POST https://id.twitch.tv/oauth2/token
+Content-Type: application/json
+
+{
+  "client_id": "miztc6t5uwudryg94pqz5hm0s3vcw8",
+  "client_secret": "jrs8npdapu64uotidhq75x98cwyl2t",
+  "grant_type": "authorization_code",
+  "code": "nepmnu5cf2mvb4drit8e70ksqpog2m",
+  "redirect_uri": "http://localhost"
+}
+
+###
+
+POST https://api.twitch.tv/kraken/streams/followed
+Content-Type: application/json
+
+{
+  "client_id": "miztc6t5uwudryg94pqz5hm0s3vcw8",
+  "client_secret": "jrs8npdapu64uotidhq75x98cwyl2t",
+  "authorization": "y94w7varz558kus5edgj4w37d01rzi"
+}
+
+###
+
+GET https://api.twitch.tv/helix/subscriptions/broadcaster_id=123
+Authorization: Bearer oucl0vew7xudv3xdzu1or6gsrclt36
+
+###
+
+
+GET https://api.twitch.tv/helix/users/
+Client-ID: miztc6t5uwudryg94pqz5hm0s3vcw8
+Authorization: Bearer vhogy8zvki8lkilmzlvhokffkm4stj
+
+###
+
+GET https://api.twitch.tv/helix/users/follows?from_id=413492535
+Client-ID: miztc6t5uwudryg94pqz5hm0s3vcw8
+
+###
+
+#curl -H 'Accept: application/vnd.twitchtv.v5+json' \
+#-H 'Client-ID: uo6dggojyb8d6soh92zknwmi5ej1q2' \
+#-X GET 'https://api.twitch.tv/kraken/chat/44322889/badges'
+#
+#curl -H 'Authorization: Bearer cfabdegwdoklmawdzdo98xt2fo512y' \
+#-X GET 'https://api.twitch.tv/helix/subscriptions?broadcaster_id=123'
