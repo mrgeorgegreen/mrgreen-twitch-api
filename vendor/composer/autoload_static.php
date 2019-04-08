@@ -21,13 +21,11 @@ class ComposerStaticInit077e4646b249f2798cf14eaa9c26bc0b
     );
 
     public static $classMap = array (
-        'App\\Controllers\\ApiController' => __DIR__ . '/../..' . '/project/Controllers/ApiController.php',
-        'App\\FileManager\\File' => __DIR__ . '/../..' . '/project/FileManager/File.php',
-        'App\\FileManager\\FilesList' => __DIR__ . '/../..' . '/project/FileManager/FilesList.php',
-        'App\\Formats\\CodeJson' => __DIR__ . '/../..' . '/project/Formats/CodeJson.php',
-        'App\\Formats\\CodeXml' => __DIR__ . '/../..' . '/project/Formats/CodeXml.php',
-        'App\\Request\\Request' => __DIR__ . '/../..' . '/project/Request/Request.php',
-        'App\\Response\\Response' => __DIR__ . '/../..' . '/project/Response/Response.php',
+        'App\\Controllers\\AuthPageController' => __DIR__ . '/../..' . '/project/Controllers/AuthPageController.php',
+        'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/project/Controllers/BaseController.php',
+        'App\\Controllers\\HomePageController' => __DIR__ . '/../..' . '/project/Controllers/HomePageController.php',
+        'App\\Controllers\\StreamerPageController' => __DIR__ . '/../..' . '/project/Controllers/StreamerPageController.php',
+        'App\\Models\\DB' => __DIR__ . '/../..' . '/project/Models/DB.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

@@ -6,11 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Controllers\\ApiController' => $baseDir . '/project/Controllers/ApiController.php',
-    'App\\FileManager\\File' => $baseDir . '/project/FileManager/File.php',
-    'App\\FileManager\\FilesList' => $baseDir . '/project/FileManager/FilesList.php',
-    'App\\Formats\\CodeJson' => $baseDir . '/project/Formats/CodeJson.php',
-    'App\\Formats\\CodeXml' => $baseDir . '/project/Formats/CodeXml.php',
-    'App\\Request\\Request' => $baseDir . '/project/Request/Request.php',
-    'App\\Response\\Response' => $baseDir . '/project/Response/Response.php',
+    'App\\Controllers\\AuthPageController' => $baseDir . '/project/Controllers/AuthPageController.php',
+    'App\\Controllers\\BaseController' => $baseDir . '/project/Controllers/BaseController.php',
+    'App\\Controllers\\HomePageController' => $baseDir . '/project/Controllers/HomePageController.php',
+    'App\\Controllers\\StreamerPageController' => $baseDir . '/project/Controllers/StreamerPageController.php',
+    'App\\Models\\DB' => $baseDir . '/project/Models/DB.php',
 );

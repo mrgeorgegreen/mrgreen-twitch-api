@@ -3,6 +3,7 @@
 use App\Controllers\AuthPageController;
 use App\Controllers\HomePageController;
 use App\Controllers\StreamerPageController;
+use App\Models\Database;
 
 function conf($arg)
 {
@@ -10,6 +11,8 @@ function conf($arg)
     return $config[$arg] ?? null;
 }
 
+$res = ( new Database )->get_connection(); //->query('select 1+1 as s' );
+$g = $res->query('CREATE TABLE IF NOT EXISTS tasks (task_id INT AUTO_INCREMENT) ENGINE=INNODB;');
 
 if (isset($_GET['twitch']) && $_GET['twitch']) {
     $main = new HomePageController();

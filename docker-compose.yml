@@ -5,8 +5,21 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-    - "80:80"
+      - "80:80"
     volumes:
-    - ./:/var/www/html
+      - ./:/var/www/html
     environment:
-      XDEBUG_CONFIG: remote_host=192.168.1.41
+      XDEBUG_CONFIG: remote_host=10.1.4.150
+
+  db:
+    image: mysql
+    hostname: "db"
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: superpass
+      MYSQL_DATABASE: twitch
+      MYSQL_USER: twitch
+      MYSQL_PASSWORD: twitch
+    volumes:
+      - ./db:/var/lib/mysql
