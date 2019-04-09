@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Controllers;
-
 
 class HomePageController extends BaseController
 {

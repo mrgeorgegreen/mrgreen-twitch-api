@@ -6,5 +6,8 @@ return([
         'response_type' => 'token',
         'scope' => 'channel:read:subscriptions chat:read',
         'token_type' => 'bearer'
+    ],
+    'webhooks' => [
+        'hub.callback' => 'https://mrgreen-twitch-api.herokuapp.com/notification'
     ]
 ]);

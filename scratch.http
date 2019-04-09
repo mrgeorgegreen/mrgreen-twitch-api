@@ -51,3 +51,26 @@ Client-ID: miztc6t5uwudryg94pqz5hm0s3vcw8
 #
 #curl -H 'Authorization: Bearer cfabdegwdoklmawdzdo98xt2fo512y' \
 #-X GET 'https://api.twitch.tv/helix/subscriptions?broadcaster_id=123'
+
+POST localhost/notification
+Content-Type: application/json
+
+{
+   "data":
+      [{
+         "id":"0123456789",
+         "user_id":"5678",
+         "user_name":"wjdtkdqhs",
+         "game_id":"21779",
+         "community_ids":[],
+         "type":"live",
+         "title":"Best Stream Ever",
+         "viewer_count":417,
+         "started_at":"2017-12-01T10:09:45Z",
+         "language":"en",
+         "thumbnail_url":"https://link/to/thumbnail.jpg"
+      }]
+}
+
+
+###
