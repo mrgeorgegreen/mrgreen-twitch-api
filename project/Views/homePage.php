@@ -101,7 +101,7 @@
     $('#favoriteStreamer').on('change', function () {
         streamer = $("#favoriteStreamer option:selected").text();
         streamer_id = $("#favoriteStreamer option:selected").attr("id");
-        $('#favoriteStreamerButton').attr("href", '/?streamer=' + streamer + '&streamer_id=' + streamer_id);
+        $('#favoriteStreamerButton').attr("href", 'streamer?name=' + streamer + '&id=' + streamer_id);
     });
 
     $('#subscribe').on('click', function () {

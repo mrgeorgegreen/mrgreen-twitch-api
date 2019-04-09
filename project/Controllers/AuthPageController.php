@@ -2,9 +2,11 @@
 
 namespace App\Controllers;
 
+use App\Core\Request;
+
 class AuthPageController extends BaseController
 {
-    public function index()
+    public function index(Request $request): void
     {
         $this->view('authPage', [
             'href' => 'https://id.twitch.tv/oauth2/authorize' .

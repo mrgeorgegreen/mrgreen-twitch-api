@@ -77,3 +77,6 @@ Content-Type: application/json
 
 ###
 
+GET localhost/notification?hub.mode=subscribe&hub.topic=https://api.twitch.tv/helix/users/follows?first=1&to_id=1337&hub.lease_seconds=864000&hub.challenge=HzSGH_h04Cgl6VbDJm7IyXSNSlrhaLvBi9eft3bw
+
+###

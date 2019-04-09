@@ -6,10 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\ApiControllers\\NotificationApiControllers' => $baseDir . '/project/ApiControllers/NotificationApiControllers.php',
     'App\\Controllers\\AuthPageController' => $baseDir . '/project/Controllers/AuthPageController.php',
     'App\\Controllers\\BaseController' => $baseDir . '/project/Controllers/BaseController.php',
     'App\\Controllers\\HomePageController' => $baseDir . '/project/Controllers/HomePageController.php',
     'App\\Controllers\\StreamerPageController' => $baseDir . '/project/Controllers/StreamerPageController.php',
+    'App\\Core\\Rout' => $baseDir . '/project/Core/Rout.php',
+    'App\\Core\\Routing' => $baseDir . '/project/Core/Routing.php',
     'App\\Models\\NotificationsModel' => $baseDir . '/project/Models/NotificationsModel.php',
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
