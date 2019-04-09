@@ -17,20 +17,30 @@ if ($_SERVER['REDIRECT_URL'] == '/notification' && isset($_GET['hub_challenge'])
 }
 
 if ($_SERVER['REDIRECT_URL'] == '/notification' && file_get_contents('php://input')) {
-    $data = json_decode(file_get_contents('php://input'));
-    foreach ($data->data as $notification) {
-        $notification = NotificationsModel::create([
-            'user_id' => $notification->user_id,
-            'started_at' => $notification->started_at,
-            'data' => json_encode($notification)
-        ]);
+    try {
+        $data = json_decode(file_get_contents('php://input'));
+        foreach ($data->data as $notification) {
+            $notification = NotificationsModel::create([
+                'user_id' => $notification->user_id,
+                'started_at' => $notification->started_at,
+                'data' => json_encode($notification)
+            ]);
+        }
+    } catch (Exception $e) {
+        echo $e->getMessage();
+        die();
     }
+
 }
 
 if ($_SERVER['REDIRECT_URL'] == '/get-notification') {
-    NotificationsModel::where('user_id', '=', '1')->first()->delete();
-//    echo (NotificationsModel::all())->toJson();
+    try {
+        NotificationsModel::where('user_id', '=', '1')->first()->delete();
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
     die();
+//    echo (NotificationsModel::all())->toJson();
 }
 
 
