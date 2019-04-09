@@ -30,7 +30,7 @@ class Request
     {
         try {
             return json_decode((file_get_contents('php://input') ?? ''), true);
-        } catch (Exception | Throwable $e) {
+        } catch (\Exception | \Throwable $e) {
             return [];
         }
     }

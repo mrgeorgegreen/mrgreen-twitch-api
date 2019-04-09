@@ -14,7 +14,7 @@ $routing->setRout(new Rout('GET', '/streamer', "App\Controllers\StreamerPageCont
 $routing->setRout(new Rout('GET', '/notification', "App\ApiControllers\NotificationApiControllers", "acceptSubscribes"));
 $routing->setRout(new Rout('POST', '/notification', "App\ApiControllers\NotificationApiControllers", "addNotification"));
 $routing->setRout(new Rout('GET', '/get-notification', "App\ApiControllers\GetNotificationApiControllers", "get"));
-$routing->setRout(new Rout('GET', '/get-log', "App\ApiControllers\GetLogApiControllers", "get"));
+//$routing->setRout(new Rout('GET', '/get-log', "App\ApiControllers\GetLogApiControllers", "get"));
 
 if (!$routing->execute(new Request())) {
     header('Location: /');

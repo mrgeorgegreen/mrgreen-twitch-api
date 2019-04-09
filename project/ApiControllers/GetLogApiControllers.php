@@ -19,7 +19,7 @@ class GetLogApiControllers
         try {
             echo (LoggerModel::all())->toJson();
             logger('GetNotificationApiControllers', json_encode($request));
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             header('HTTP/1.1 405 Method Not Allowed', true, 405);
         }
     }
