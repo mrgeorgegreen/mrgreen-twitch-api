@@ -22,9 +22,8 @@ if ($_SERVER['REDIRECT_URL'] == '/notification' && file_get_contents('php://inpu
         }
     } catch (Exception $e) {
         echo $e->getMessage();
-        die();
     }
-
+    die();
 }
 
 if ($_SERVER['REDIRECT_URL'] == '/get-notification') {
