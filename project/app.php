@@ -28,14 +28,13 @@ if ($_SERVER['REDIRECT_URL'] == '/notification' && file_get_contents('php://inpu
 
 if ($_SERVER['REDIRECT_URL'] == '/get-notification') {
     try {
-        NotificationsModel::where('user_id', '=', '1')->first()->delete();
+//        NotificationsModel::where('user_id', '=', '1')->first()->delete();
+        echo (NotificationsModel::all())->toJson();
     } catch (Exception $e) {
         echo $e->getMessage();
     }
     echo __DIR__;
-
     die();
-//    echo (NotificationsModel::all())->toJson();
 }
 
 
