@@ -35,8 +35,8 @@ class Routing
                 $calss = $rout->controller;
                 try {
                     (new $calss())->{$rout->method}($request);
-                } catch (\Exception $e){
-                    header('HTTP/1.1 405 Method Not Allowed', true, 400);
+                } catch (Exception $e){
+                    header('HTTP/1.1 405 Method Not Allowed', true, 405);
                 }
 
                 return true;

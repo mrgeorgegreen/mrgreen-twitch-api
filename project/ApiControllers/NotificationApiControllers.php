@@ -37,7 +37,7 @@ class NotificationApiControllers
 
                 }
             } catch (Exception $e) {
-                header('HTTP/1.1 405 Method Not Allowed', true, 400);
+                header('HTTP/1.1 405 Method Not Allowed', true, 405);
             }
         }
     }
