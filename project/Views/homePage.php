@@ -128,10 +128,6 @@
             });
     });
 </script>
-<script type="text/javascript">
-    data = window.location.hash.replace("#", "$");
-    document.cookie = 'tag=' + data;
-</script>
 </body>
 </html>
 
