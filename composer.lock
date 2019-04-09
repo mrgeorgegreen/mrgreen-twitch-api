@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "220b0a224bb9adaf5bf68d46e01a8398",
+    "content-hash": "f86713022cdefab0d9b46274f80ba1ee",
     "packages": [
         {
             "name": "illuminate/container",
@@ -460,6 +460,8 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-pdo_sqlite": "*"
+    },
     "platform-dev": []
 }
