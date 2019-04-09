@@ -39,6 +39,8 @@ if ($_SERVER['REDIRECT_URL'] == '/get-notification') {
     } catch (Exception $e) {
         echo $e->getMessage();
     }
+    echo __DIR__;
+
     die();
 //    echo (NotificationsModel::all())->toJson();
 }
