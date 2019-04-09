@@ -5,12 +5,6 @@ use App\Controllers\HomePageController;
 use App\Controllers\StreamerPageController;
 use App\Models\NotificationsModel;
 
-function conf($arg)
-{
-    $config = include(__DIR__ . '/../conf.php');
-    return $config[$arg] ?? null;
-}
-
 if ($_SERVER['REDIRECT_URL'] == '/notification' && isset($_GET['hub_challenge']) && $_GET['hub_challenge']) {
     echo $_GET['hub_challenge'];
     die();
