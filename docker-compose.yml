@@ -9,4 +9,4 @@ services:
     volumes:
     - ./:/var/www/html
     environment:
-      XDEBUG_CONFIG: remote_host=192.168.1.41
+      XDEBUG_CONFIG: remote_host=10.1.4.150
