@@ -23,8 +23,11 @@ RUN docker-php-ext-enable xdebug
 RUN echo "xdebug.remote_enable=1" >> /usr/local/etc/php/php.ini
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN chmod 777 /var/www/html/db/sqlite/database.sqlite
+#RUN chmod 777 /var/www/html/db/sqlite/database.sqlite
 #chmod g+w /var/www/html/db/sqlite
 #chmod g+w /var/www/html/db/sqlite/database.sqlite
 #RUN composer update
 #RUN composer dump-autoload -o
+
+#sudo chown -R :www-data /var/www/yourLarvelFolder
+#sudo chmod -R 775 /var/www/yourLarvelFolder/storage

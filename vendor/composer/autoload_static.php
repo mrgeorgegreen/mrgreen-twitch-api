@@ -74,6 +74,7 @@ class ComposerStaticInit077e4646b249f2798cf14eaa9c26bc0b
         'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/project/Controllers/BaseController.php',
         'App\\Controllers\\HomePageController' => __DIR__ . '/../..' . '/project/Controllers/HomePageController.php',
         'App\\Controllers\\StreamerPageController' => __DIR__ . '/../..' . '/project/Controllers/StreamerPageController.php',
+        'App\\Models\\NotificationsModel' => __DIR__ . '/../..' . '/project/Models/NotificationsModel.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\CarbonPeriod' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonPeriod.php',
