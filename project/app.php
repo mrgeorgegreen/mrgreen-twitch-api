@@ -11,14 +11,9 @@ function conf($arg)
     return $config[$arg] ?? null;
 }
 
-$a = NotificationsModel::where('user_id', '=', '1')->get();
-
 if ($_SERVER['REDIRECT_URL'] == '/notification' && isset($_GET['hub_challenge']) && $_GET['hub_challenge']) {
     echo $_GET['hub_challenge'];
     die();
-//    $notification = NotificationsModel::create();
-//    $notification->user_id =
-//    $notification->save();
 }
 
 if ($_SERVER['REDIRECT_URL'] == '/notification' && file_get_contents('php://input')) {
@@ -29,10 +24,12 @@ if ($_SERVER['REDIRECT_URL'] == '/notification' && file_get_contents('php://inpu
             'started_at' => $notification->started_at,
             'data' => json_encode($notification)
         ]);
-//        $notification->save();
     }
-//    $notification = NotificationsModel::create();
-//    $notification->user_id =
+}
+
+if ($_SERVER['REDIRECT_URL'] == '/get-notification') {
+    echo (NotificationsModel::all())->toJson();
+    die();
 }
 
 
