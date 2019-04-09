@@ -13,12 +13,10 @@ use App\Models\NotificationsModel;
 
 class GetNotificationApiControllers
 {
-
     public function get(Request $request): void
     {
         try {
             echo (NotificationsModel::all())->toJson();
-            logger('GetNotificationApiControllers', json_encode($request));
         } catch (\Exception $e) {
             header('HTTP/1.1 405 Method Not Allowed', true, 405);
         }

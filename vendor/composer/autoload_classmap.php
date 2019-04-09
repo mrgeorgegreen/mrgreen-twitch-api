@@ -6,13 +6,17 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\ApiControllers\\GetLogApiControllers' => $baseDir . '/project/ApiControllers/GetLogApiControllers.php',
+    'App\\ApiControllers\\GetNotificationApiControllers' => $baseDir . '/project/ApiControllers/GetNotificationApiControllers.php',
     'App\\ApiControllers\\NotificationApiControllers' => $baseDir . '/project/ApiControllers/NotificationApiControllers.php',
     'App\\Controllers\\AuthPageController' => $baseDir . '/project/Controllers/AuthPageController.php',
     'App\\Controllers\\BaseController' => $baseDir . '/project/Controllers/BaseController.php',
     'App\\Controllers\\HomePageController' => $baseDir . '/project/Controllers/HomePageController.php',
     'App\\Controllers\\StreamerPageController' => $baseDir . '/project/Controllers/StreamerPageController.php',
+    'App\\Core\\Request' => $baseDir . '/project/Core/Request.php',
     'App\\Core\\Rout' => $baseDir . '/project/Core/Rout.php',
     'App\\Core\\Routing' => $baseDir . '/project/Core/Routing.php',
+    'App\\Models\\LoggerModel' => $baseDir . '/project/Models/LoggerModel.php',
     'App\\Models\\NotificationsModel' => $baseDir . '/project/Models/NotificationsModel.php',
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',

@@ -70,13 +70,17 @@ class ComposerStaticInit077e4646b249f2798cf14eaa9c26bc0b
     );
 
     public static $classMap = array (
+        'App\\ApiControllers\\GetLogApiControllers' => __DIR__ . '/../..' . '/project/ApiControllers/GetLogApiControllers.php',
+        'App\\ApiControllers\\GetNotificationApiControllers' => __DIR__ . '/../..' . '/project/ApiControllers/GetNotificationApiControllers.php',
         'App\\ApiControllers\\NotificationApiControllers' => __DIR__ . '/../..' . '/project/ApiControllers/NotificationApiControllers.php',
         'App\\Controllers\\AuthPageController' => __DIR__ . '/../..' . '/project/Controllers/AuthPageController.php',
         'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/project/Controllers/BaseController.php',
         'App\\Controllers\\HomePageController' => __DIR__ . '/../..' . '/project/Controllers/HomePageController.php',
         'App\\Controllers\\StreamerPageController' => __DIR__ . '/../..' . '/project/Controllers/StreamerPageController.php',
+        'App\\Core\\Request' => __DIR__ . '/../..' . '/project/Core/Request.php',
         'App\\Core\\Rout' => __DIR__ . '/../..' . '/project/Core/Rout.php',
         'App\\Core\\Routing' => __DIR__ . '/../..' . '/project/Core/Routing.php',
+        'App\\Models\\LoggerModel' => __DIR__ . '/../..' . '/project/Models/LoggerModel.php',
         'App\\Models\\NotificationsModel' => __DIR__ . '/../..' . '/project/Models/NotificationsModel.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
