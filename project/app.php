@@ -6,6 +6,8 @@ use App\Controllers\StreamerPageController;
 use App\Models\NotificationsModel;
 
 if ($_SERVER['REDIRECT_URL'] == '/notification' && isset($_GET['hub_challenge']) && $_GET['hub_challenge']) {
+
+    header("Status: 200");
     echo $_GET['hub_challenge'];
     die();
 }
@@ -23,17 +25,26 @@ if ($_SERVER['REDIRECT_URL'] == '/notification' && file_get_contents('php://inpu
     } catch (Exception $e) {
         echo $e->getMessage();
     }
+
+    header("Status: 200");
+    echo "OK";
     die();
 }
 
 if ($_SERVER['REDIRECT_URL'] == '/get-notification') {
     try {
-//        NotificationsModel::where('user_id', '=', '1')->first()->delete();
-        echo (NotificationsModel::all())->toJson();
+
+        $dbh = new PDO('sqlite:/tmp/foo.db'); // success
+        echo $dbh->query('DELETE FROM "notifications" WHERE "user_id" = "1"');
+
+//            NotificationsModel::where('user_id', '=', '1')->first()->destroy();
+//        echo (NotificationsModel::all())->toJson();
     } catch (Exception $e) {
         echo $e->getMessage();
     }
-    echo __DIR__;
+
+    header("Status: 200");
+    echo "OK";
     die();
 }
 
