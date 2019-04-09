@@ -18,6 +18,7 @@ class GetNotificationApiControllers
     {
         try {
             echo (NotificationsModel::all())->toJson();
+            logger('GetNotificationApiControllers', json_encode($request));
         } catch (Exception $e) {
             echo $e->getMessage();
         }

@@ -10,19 +10,19 @@ namespace App\Core;
 
 class Rout
 {
-    /** @var String Type of HTTP request POST GET */
+    /** @var string Type of HTTP request POST GET */
     private $type;
 
-    /** @var String Part of HTTP request POST GET */
+    /** @var string Part of HTTP request POST GET */
     private $url;
 
-    /** @var String Class Controller */
+    /** @var string Class Controller */
     private $controller;
 
-    /** @var String Method of Class Controller */
+    /** @var string Method of Class Controller */
     private $method;
 
-    public function __construct(String $type, String $url, String $controller, String $method)
+    public function __construct(string $type, string $url, string $controller, string $method)
     {
         $this->type = $type;
         $this->url = $url;
@@ -30,7 +30,7 @@ class Rout
         $this->method = $method;
     }
 
-    public function __get($name): ?String
+    public function __get($name): ?string
     {
         if (!property_exists($this, $name)) {
             return null;

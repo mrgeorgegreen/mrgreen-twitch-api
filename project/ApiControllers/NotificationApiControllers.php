@@ -19,7 +19,7 @@ class NotificationApiControllers
         if ($request->hub_challenge) {
 
             echo $request->hub_challenge;
-//            header('200 OK', true, 200);
+            logger('NotificationApi_acceptSubscribes', json_encode($request));
         }
     }
 
@@ -35,9 +35,8 @@ class NotificationApiControllers
                         'data' => json_encode($notification)
                     ]);
 
-//                    header('200 OK', true, 200);
                 }
-            } catch (\Exception $e) {
+            } catch (Exception $e) {
                 header('HTTP/1.1 405 Method Not Allowed', true, 400);
             }
         }
