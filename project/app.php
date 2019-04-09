@@ -35,15 +35,15 @@ if ($_SERVER['REDIRECT_URL'] == '/get-notification') {
     try {
 
 //        $dbh = new PDO('sqlite:/tmp/foo.db'); // success
-//        echo $dbh->query('DELETE FROM "notifications" WHERE "user_id" = "1"');
-
-            NotificationsModel::where('user_id', '=', '1')->first()->destroy();
-//        echo (NotificationsModel::all())->toJson();
+//        echo (string) $dbh->query('DELETE FROM "notifications" WHERE "user_id" = \'1\'');
+//
+//            NotificationsModel::where('user_id', '=', '1')->first()->destroy();
+        echo (NotificationsModel::all())->toJson();
     } catch (Exception $e) {
         echo $e->getMessage();
     }
 
-    header("Status: 200");
+//    header("Status: 200");
     echo "OK";
     die();
 }
