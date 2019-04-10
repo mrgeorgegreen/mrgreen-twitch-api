@@ -18,12 +18,13 @@
 
 3. Additionally please answer following questions at the bottom of your `README`:
 -  How would you deploy the above on AWS? (ideally a rough architecture diagram will help)
-> This code look like be work in AWS PAAS PHP aplication. There is [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/) in AWS.
+> This code look like be work in AWS PaaS PHP aplication. There is [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/) in AWS.
 > SQLight is good for prototip, but  for Productions and hight load  need find anothe databace.
->  requirement is using containers, and it is done. PHP application have good opportunity to scaling.
+>  requirement is using containers, and it is done. PHP application have good opportunity to scaling. 
+> Also this project created in docker and best to IaaS.
 
 -  Where do you see bottlenecks in your proposed architecture and how would you approach scaling this app starting from 100 reqs/day to 900MM reqs/day over 6 months?
-> 1. stay on PASS and we hold all this but we spend more money on AWS. AWS do stabilisation, and powerful, routing etc.
+> 1. stay on PaaS and we hold all this but we spend more money on AWS. AWS do stabilisation, and powerful, routing etc.
 > 2. OR we switch to IaaS, but need create strong architecture (usual schema is - many php-application servers, and one or two database, do balancing, maybe sharding atc).
 > Main challenge is scaling of DB - DB is bottleneck. Configuration depends from expected loaded.
 > Usual schema is - many php(application) servers,  and one or two relational dbs.
