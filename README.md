@@ -2,6 +2,8 @@
 
 [Task Description](https://gist.github.com/osamakhn/14a378f3107d49de47e0b617a3d5fdf5)
 
+Apr 19 - Was bug with "Scope Name" (permissions). Fixed.
+
 1. Link to live demo:
 https://mrgreen-twitch-api.herokuapp.com
 
